@@ -1,31 +1,103 @@
 ﻿using System;
 
-namespace ArrayProcessing
+using System.Collections.Generic;
+
+using System.Linq;
+
+using System.Text;
+
+using System.Threading.Tasks;
+
+//
+
+namespace Assignment5b
+
 {
+
     class Program
+
     {
+
         static void Main(string[] args)
+
         {
 
-            int[] arr = { 17, 11, 9, 3, 4, 11, 6, 11, 8, 7 };
-            int arr_size = arr.Length;
 
-            printRepeating(arr, arr_size);
+
+            Program a = new Program();
+
+
+
+            Console.WriteLine("the longest word is : ");
+
+
+
+            Console.WriteLine(a.MyFunctionA("Ada Lovelace wrote the first algorithm designed for processing by an Analytical Engine."));
+
+
+
+            Console.ReadLine();
+
         }
-        static void printRepeating(int[] arr, int size)
-        {
-            int i, j;
 
-            Console.WriteLine("Repeated Elements are :");
-            for (i = 0; i < size; i++)
+
+
+        public String MyFunctionA(string input)
+
+        {
+
+            string[] words = input.Split(' ');
+
+
+
+            int wordArrayLength = words.Length;
+
+
+
+            int[] wordsLength = new int[wordArrayLength];
+
+
+
+            foreach (var word in words)
+
             {
-                for (j = i + 1; j < size; j++)
-                {
-                    if (arr[i] == arr[j])
-                        Console.WriteLine(arr[i] + " ");
-                    Console.ReadLine();
-                }
+
+
+
             }
+
+
+
+            string currentWord = words[0];
+
+
+
+            string nextWord;
+
+
+
+            for (int y = 0; y < words.Length - 1; y++)
+
+            {
+
+                currentWord = words[y];
+
+
+
+                nextWord = words[y + 1];
+
+
+
+            }
+
+
+
+            return currentWord;
+
         }
+
+
+
     }
+
 }
